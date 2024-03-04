@@ -1,0 +1,82 @@
+@use 'variables';
+
+.event{
+    padding: 80px 0;
+    color: variables.$textColor;
+    background-color: red;
+
+    .container {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__details {
+
+        &__title{
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__img {
+        max-width: 360px;
+    }
+
+    &--img-lef{
+        .container{
+            flex-direction: row-reverse;
+        }
+    }
+
+    &--c-plus{
+        background-image: linear-gradient(#01588c, #08e4c5);
+    }
+
+    &--c-sharp{
+        background-image: linear-gradient(#08e4c5, #7f27ff);
+    }
+
+    &--java{
+        background-image: linear-gradient(#7f27ff, #000)
+    }
+
+    &--sql{
+        background-image: linear-gradient(#000, #01588c);
+    }
+
+    @media (max-width: 640px){
+        .container{
+            display: block;
+            width: 80%;
+        }
+
+        &__details {
+
+            &__title{
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            &__description{
+                margin-bottom: 16px;
+            }
+        }
+
+        &__img {
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 1023px){
+        .container {
+            display: block;
+            width: 90%;
+        }
+
+        &__img {
+            margin-top: 16px;
+            max-width: 100%;
+        }
+    }
+}

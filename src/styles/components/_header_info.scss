@@ -39,4 +39,12 @@
             }
         }
     }
+
+    @media (max-width: 1023px){
+        &__infos {
+            &__item{
+                margin-right: 16px;
+            }
+        }
+    }
 }
