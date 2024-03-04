@@ -1,4 +1,7 @@
 @use 'variables';
+@use 'header';
+@use 'components/header_info';
+@use 'components/button.scss';
 
 *{
     margin: 0;
@@ -6,6 +9,7 @@
     box-sizing: border-box;
     font-family: Lato, sans-serif;
     color: variables.$textColor;
+    list-style: none;
 }
 
 .container{

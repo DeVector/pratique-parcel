@@ -1,0 +1,58 @@
+@use 'variables';
+
+.header{
+    padding-top: 64px;
+    padding-bottom: 100px;
+    background-image: url(../images/cupcakes.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: variables.$secundaryTextColor;
+        content: '';
+        opacity: .6;
+    }
+
+    .container{
+        position: relative;
+    }
+
+    &__logo{
+        margin: 0 auto;
+        height: 100px;
+        display: block;
+    }
+
+    &__content {
+        
+        &__text{
+            margin: 64px 0;
+            text-align: center;
+            line-height: 56px;
+            color: variables.$textColor;
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 56px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        
+        &__content {
+
+            &__text{
+                margin: 36px;
+                font-size: 30px;
+                line-height: 36px;
+            }
+        }
+
+    }
+
+}
